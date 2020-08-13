@@ -17,8 +17,8 @@
 
 	<parent>
 		<groupId>org.camunda</groupId>
-		<artifactId>camunda-release-parent</artifactId>
-		<version>3.7</version>
+		<artifactId>camunda-bpm-release-parent</artifactId>
+		<version>2.1.0</version>
 		<relativePath />
 	</parent>
 
@@ -26,8 +26,8 @@
 		<!-- We intentionally always compile against latest Camunda release,
 		but test against many versions *provided* by user projects.
 		Therefore the tests are in a separate module. -->
-    <camunda.version>7.13.0</camunda.version>
-    <camunda.compile.version>7.13.0</camunda.compile.version>
+    <camunda.version>7.14.0-SNAPSHOT</camunda.version>
+    <camunda.compile.version>7.14.0-SNAPSHOT</camunda.compile.version>
 		<spring.version>3.1.2.RELEASE</spring.version>
 	</properties>
 
@@ -68,6 +68,18 @@
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 		</dependency>
+  
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.6.2</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.6.2</version>
+        </dependency>
 
 		<dependency>
 			<!-- Needed for InMemoryH2Test -->
