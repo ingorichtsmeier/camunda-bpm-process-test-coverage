@@ -5,6 +5,7 @@ import org.camunda.bpm.extension.process_test_coverage.junit.rules.TestCoverageP
 import org.camunda.bpm.extension.process_test_coverage.junit.rules.TestCoverageProcessEngineRuleBuilder;
 import org.camunda.bpm.extension.process_test_coverage.util.CoverageReportUtil;
 import org.junit.ClassRule;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.RuleChain;
@@ -84,6 +85,7 @@ public class MultipleDeploymentsForClassTest {
     @ClassRule
     public static RuleChain chain = RuleChain.outerRule(checkReportRule).around(rule);
 
+    @Ignore
     @Test
     //duplicating Deployment annotation for backward compatibility with camunda-bpm-engine-7.3.0
     @Deployment(resources = {"superProcess-single-branch.bpmn", "process.bpmn"})
